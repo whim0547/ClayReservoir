@@ -8,12 +8,13 @@ Google Colab
 ## ファイル
 - clay_particle.ipynb: 小田ら(2001)の粘土モデル
 - reservoir_computing.ipynb: ReservoirComputing + テスト(テスト用に同じ粘土モデルを定義しているのは内緒)
-- particle_test_data.npy, particle_test_data2.npy: 試しに作ってみた(そしてオチに至った)テストデータ(size: 4 * N * F * 400 * 2)
-  - [情報種]: input(pos, init move)&output(pos, final move(=posのdiff))の順で4つ
-  - [何番目]: 何個目のデータセットか(N)
-  - [何フレーム目]: 何フレーム目の動作か(F)
-  - [粒子]: 何番目の粒子か(400)
-  - [座標]: Vector2
+- particle_test_data.npy, particle_test_data2.npy: 試しに作ってみた(そしてオチに至った)テストデータ
+  - size: 情報種 * データ番号 * フレーム * 粒子 * 座標(4 * N * F * 400 * 2)
+  - 情報種: input(pos, init move)&output(pos, final move(=posのdiff))の順で4つ
+  - データ番号: 何個目のデータセットか(N)
+  - フレーム: 何フレーム目の動作か(F)
+  - 粒子: 何番目の粒子か(400)
+  - 座標: Vector2
 
 ## オチ
 ダイナミックな変形をしないと変形しないような学習をする
